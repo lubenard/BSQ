@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tab_10_10.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 18:01:50 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 21:05:47 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,31 @@ int main(void)
 	char **tab;
 	if ((tab = malloc(sizeof(char) * 9 * 9)) == NULL)
 		return (0);
-	char liste1[] = "..o.o..o..";
-	char liste2[] = "..o.o..o..";
-	char liste3[] = "..o.o..o..";
-	char liste4[] = "..o.o..o..";
-	char liste5[] = "..o.o..o..";
-	char liste6[] = "..o.o..o..";
-	char liste7[] = "..o.o..o..";
-	char liste8[] = "..o.o..o..";
-	char liste9[] = "..o.o..o..";
-	char liste10[] = "..o.o..o..";
-	tab[0] = liste1;
-	tab[1] = liste2;
-	tab[2] = liste3;
-	tab[3] = liste4;
-	tab[4] = liste5;
-	tab[5] = liste6;
-	tab[6] = liste7;
-	tab[7] = liste8;
-	tab[8] = liste9;
-	tab[9] = liste10;
+	char liste1[] = ".......o..";
+	char liste2[] = ".......o..";
+	char liste3[] = "o.........";
+	char liste4[] = "....o..o..";
+	char liste5[] = ".......o..";
+	char liste6[] = "..o....o..";
+	char liste7[] = "..o.o.....";
+	char liste8[] = "..........";
+	char liste9[] = "..........";
+	char liste10[] = ".....o....";
+	tab[9] = liste1;
+	tab[8] = liste2;
+	tab[7] = liste3;
+	tab[6] = liste4;
+	tab[5] = liste5;
+	tab[4] = liste6;
+	tab[3] = liste7;
+	tab[2] = liste8;
+	tab[1] = liste9;
+	tab[0] = liste10;
 
 	c.vid = '.';
 	c.obs = 'o';
 	c.lig = 'p';
-	c.lig = 'R';
+	c.coi = 'R';
 	
 	t.tab = tab;
 	t.x = 9;

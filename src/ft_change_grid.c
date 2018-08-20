@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 09:56:32 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 19:55:17 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 21:06:27 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ char	**cg_sides(t_tab t, t_char c)
 			t.tab[0][x] = c.lig;
 		if (t.tab[t.y][x] != c.obs)
 			t.tab[t.y][x] = c.lig;
-		(x == t.x || x == 0)? t.tab[t.y][x++] = c.coi : x;
-		(x == t.x || x == 0)? t.tab[0][x++] = c.coi : x;
+		(x == t.x || x == 0)? t.tab[t.y][x] = c.coi : x;
+		(x == t.x || x == 0)? t.tab[0][x] = c.coi : x;
 		x++;
 	}
+	ft_display(t);
+	ft_putchar('\n');
 	return (t.tab);
 }
 
@@ -92,17 +94,19 @@ char	**cg_lines(t_tab t, t_char c, int x, int y)
 t_tab	ft_change_grid(t_tab t, t_char c)
 {
 	int		x_var;
+	int		y_var;
 
+	y_var = t.y;
 	t.tab = cg_sides(t, c);
-	while (t.y >= 0)
+	while (y_var >= 0)
 	{
 		x_var = 0;
 		while (x_var <= t.x)
 		{
-			if (t.tab[t.y][x_var] == c.obs)
-				t.tab = cg_lines(t, c, x_var, t.y);
+			if (t.tab[y_var][x_var] == c.obs)
+				t.tab = cg_lines(t, c, x_var, y_var);
 			x_var++;
 		}
-		t.y--;
+		y_var--;
 	}	return (t);
 }
