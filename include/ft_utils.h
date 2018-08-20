@@ -6,7 +6,7 @@
 /*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 15:29:22 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 18:01:51 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 
 typedef	struct		s_char
 {
-	char	vide;
-	char	obstacle;
-	char	plein;
-	char	ligne;
-	char	croisement;
+	char	vid;
+	char	obs;
+	char	ple;
+	char	lig;
+	char	coi;
 }					t_char;
 
 typedef	struct		s_tab
@@ -33,7 +33,7 @@ typedef	struct		s_tab
 }					t_tab;
 
 int		ft_display(t_tab tableau);
-char	**ft_change_grid(t_tab tableau, t_char characters);
+t_tab	ft_change_grid(t_tab tableau, t_char characters);
 void	ft_putchar(char c);
 
 #endif

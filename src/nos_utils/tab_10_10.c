@@ -6,11 +6,12 @@
 /*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 13:10:36 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 18:01:50 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/ft_utils.h"
+#include "../../include/ft_struct.h"
 
 int main(void)
 {
@@ -37,6 +38,16 @@ int main(void)
 	tab[7] = liste8;
 	tab[8] = liste9;
 	tab[9] = liste10;
-	ft_display(ft_change_grid(tab, 9, 9), 9, 9);
+
+	c.vid = '.';
+	c.obs = 'o';
+	c.lig = 'p';
+	c.lig = 'R';
+	
+	t.tab = tab;
+	t.x = 9;
+	t.y = 9;
+
+	ft_display(ft_change_grid(t, c));
 	return (0);
 }
