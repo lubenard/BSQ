@@ -6,15 +6,16 @@
 /*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 13:52:31 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 14:00:23 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 14:25:16 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef S_CHAR_H
-# define S_CHAR_H
+#ifndef FT_STRUCT_H
+# define FT_STRUCT_H
 
 # include "ft_utils.h"
 
 t_char		characters;
+t_tab		tableau;
 
 #endif

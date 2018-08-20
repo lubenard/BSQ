@@ -6,7 +6,7 @@
 /*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 14:00:25 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 14:34:27 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int		ft_display(char **tab, int x, int y);
-char	**ft_change_grid(char **tab, int x, int y);
-void	ft_putchar(char c);
-
 typedef	struct		s_char
 {
 	char	vide;
@@ -28,5 +24,16 @@ typedef	struct		s_char
 	char	ligne;
 	char	croisement;
 }					t_char;
+
+typedef	struct		s_tab
+{
+	char	**tab;
+	int		x;
+	int		y;
+}					t_tab;
+
+int		ft_display(t_tab tableau);
+char	**ft_change_grid(t_tab tableau, t_char characters);
+void	ft_putchar(char c);
 
 #endif
