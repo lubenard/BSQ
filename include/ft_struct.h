@@ -15,7 +15,7 @@
 
 # include "ft_utils.h"
 
-t_char		characters;
-t_tab		tableau;
+t_char		chara;
+t_tab		tabl;
 
 #endif

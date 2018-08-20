@@ -12,17 +12,17 @@
 
 #include "../include/ft_utils.h"
 
-int		ft_display(t_tab tableau)
+int		ft_display(t_tab tabl)
 {
 	int x_var;
 
-	while (tableau.y >= 0)
+	while (tabl.y >= 0)
 	{
 		x_var = 0;
-		while (x_var <= tableau.x)
-			ft_putchar(tableau.tab[tableau.y][x_var++]);
+		while (x_var <= tabl.x)
+			ft_putchar(tabl.tab[tabl.y][x_var++]);
 		ft_putchar('\n');
-		tableau.y--;
+		tabl.y--;
 	}
 	return (0);
 }
