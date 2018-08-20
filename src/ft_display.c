@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.h                                         :+:      :+:    :+:   */
+/*   del_aff_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 10:24:04 by hjamet           ###   ########.fr       */
+/*   Created: 2018/08/20 10:18:10 by hjamet            #+#    #+#             */
+/*   Updated: 2018/08/20 10:24:27 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_UTILS_H
-# define FT_UTILS_H
+#include "../include/ft_utils.h"
 
-#include <unistd.h>
-
-int		ft_display(char **tab, int x, int y);
-
-#endif
+int		ft_display(char **tab, int x, int y)
+{
+	int x_var;
+	int y_var;
+	while ()
+	return (0);
+}
