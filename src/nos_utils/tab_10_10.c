@@ -6,11 +6,10 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 21:05:47 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 00:03:32 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ft_utils.h"
 #include "../../include/ft_struct.h"
 
 int main(void)
@@ -39,15 +38,15 @@ int main(void)
 	tab[1] = liste9;
 	tab[0] = liste10;
 
+	c.ple = 'P';
 	c.vid = '.';
-	c.obs = 'o';
-	c.lig = 'p';
+	c.obs = 'O';
+	c.lig = 'L';
 	c.coi = 'R';
-	
 	t.tab = tab;
 	t.x = 9;
 	t.y = 9;
 
-	ft_display(ft_change_grid(t, c));
+	ft_display(ft_solve(t, c));
 	return (0);
 }

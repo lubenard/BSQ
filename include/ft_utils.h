@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 18:01:51 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 00:03:35 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,15 @@ typedef	struct		s_tab
 	int		y;
 }					t_tab;
 
-int		ft_display(t_tab tableau);
-t_tab	ft_change_grid(t_tab tableau, t_char characters);
+typedef struct		s_sol
+{
+	int 	x;
+	int 	y;
+	int		longeur;
+}					t_sol;
+
+int		ft_display(t_tab t);
 void	ft_putchar(char c);
+t_tab	ft_solve(t_tab t, t_char c);
 
 #endif
