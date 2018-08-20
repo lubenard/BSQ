@@ -6,11 +6,13 @@
 /*   By: hjamet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 09:56:32 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/20 10:17:13 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/20 13:18:29 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	**ft_change_grille(char **tab, int x, int y)
+#include "../include/ft_utils.h"
+
+char	**ft_change_grid(char **tab, int x, int y)
 {
 	int x_var;
 	int y_var;
@@ -19,19 +21,19 @@ char	**ft_change_grille(char **tab, int x, int y)
 	y_var = 0;
 	while (x_var <= x)
 	{
-		if (tab[x_var][0] != 'o')
-			tab[x_var][0] = 'p';
-		if (tab[x_var][y] != 'o')
-			tab[x_var][y] = 'p';
-		x++;
+		if (tab[0][x_var] != 'o')
+			tab[0][x_var] = 'p';
+		if (tab[y][x_var] != 'o')
+			tab[y][x_var] = 'p';
+		x_var++;
 	}
 	while (y_var <= y)
 	{
-		if (tab[0][y_var] != 'o')
-			tab[0][y_var] = 'p';
-		if (tab[x][y_var] != 'o')
-			tab[x][y_var] = 'p';
-		x++;
+		if (tab[y_var][0] != 'o')
+			tab[y_var][0] = 'p';
+		if (tab[y_var][x] != 'o')
+			tab[y_var][x] = 'p';
+		y_var++;
 	}
 	while (x_var <= x)
 	{
@@ -42,4 +44,5 @@ char	**ft_change_grille(char **tab, int x, int y)
 			x_var++;
 		}
 	}
+	return (0);
 }
