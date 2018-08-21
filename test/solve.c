@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 21:43:52 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:47:32 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,5 @@ t_tab	ft_solve(void)
 			g_tab.tab[g_s.y - y][g_s.x + x++] = g_c.ple;
 		y--;
 	}
-	return (t);
+	return (g_tab);
 }
