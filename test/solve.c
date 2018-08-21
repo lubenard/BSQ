@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 21:47:32 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:54:15 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,19 @@ int		ft_sav(int i, int x, int y)
 	return (0);
 }
 
-int		ft_grow(int x, int y)
+int		ft_grow(int x, int y, int i)
 {
 	int		x_var;
 	int		y_var;
-	int		i;
 
-	i = 0;
 	while (x + i + 1 <= g_tab.x && y - i - 1 >= 0)
 	{
 		x_var = x + ++i;
 		y_var = y - i;
 		while (x_var >= x)
 		{
-			if (g_tab.tab[y - i][x_var] == g_c.obs || g_tab.tab[y_var][x + i] == g_c.obs)
+			if (g_tab.tab[y - i][x_var] == g_c.obs ||
+				g_tab.tab[y_var][x + i] == g_c.obs)
 				ft_sav(i, x, y);
 			if (g_tab.tab[y - i][x_var] == g_c.obs)
 				return (ft_optimize(y - i, x_var, y, x));
@@ -83,9 +82,7 @@ t_tab	ft_solve(void)
 		x = 0;
 		while (x <= g_tab.x)
 			if (g_tab.tab[y][x] == g_c.vid)
-			{
-				ft_grow(x++, y);
-			}
+				ft_grow(x++, y, 0);
 			else
 				x++;
 		y--;
