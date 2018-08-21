@@ -6,11 +6,11 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 13:44:46 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 21:11:43 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:44:18 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_utils.h"
+#include "ft_struct.h"
 
 void	ft_putchar(char c)
 {
@@ -19,11 +19,11 @@ void	ft_putchar(char c)
 
 int		ft_display(t_tab t)
 {
-	while (t.y >= 0)
+	while (g_tab.y >= 0)
 	{
-		write(1, t.tab[t.y], t.x + 1);
+		write(1, g_tab.tab[g_tab.y], g_tab.x + 1);
 		ft_putchar('\n');
-		t.y--;
+		g_tab.y--;
 	}
 	ft_putchar('\n');
 	return (0);

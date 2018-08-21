@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 21:32:46 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:43:52 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int		ft_optimize(int y1, int x1, int y2, int x2)
 		x = x2;
 		while (x <= x1)
 		{
-			if (t.tab[y][x] != c.obs)
-				t.tab[y][x] = c.tem;
+			if (g_tab.tab[y][x] != g_c.obs)
+				g_tab.tab[y][x] = g_c.tem;
 			x++;
 		}
 		y--;
@@ -34,11 +34,11 @@ int		ft_optimize(int y1, int x1, int y2, int x2)
 
 int		ft_sav(int i, int x, int y)
 {
-	if (s.longeur < i)
+	if (g_s.longeur < i)
 	{
-		s.x = x;
-		s.y = y;
-		s.longeur = i;
+		g_s.x = x;
+		g_s.y = y;
+		g_s.longeur = i;
 	}
 	return (0);
 }
@@ -50,23 +50,23 @@ int		ft_grow(int x, int y)
 	int		i;
 
 	i = 0;
-	while (x + i + 1 <= t.x && y - i - 1 >= 0)
+	while (x + i + 1 <= g_tab.x && y - i - 1 >= 0)
 	{
 		x_var = x + ++i;
 		y_var = y - i;
 		while (x_var >= x)
 		{
-			if (t.tab[y - i][x_var] == c.obs || t.tab[y_var][x + i] == c.obs)
+			if (g_tab.tab[y - i][x_var] == g_c.obs || g_tab.tab[y_var][x + i] == g_c.obs)
 				ft_sav(i, x, y);
-			if (t.tab[y - i][x_var] == c.obs)
+			if (g_tab.tab[y - i][x_var] == g_c.obs)
 				return (ft_optimize(y - i, x_var, y, x));
-			if (t.tab[y_var][x + i] == c.obs)
+			if (g_tab.tab[y_var][x + i] == g_c.obs)
 				return (ft_optimize(y_var, x + i, y, x));
 			x_var--;
 			y_var++;
 		}
 	}
-	if (x + i + 1 > t.x || y - i - 1 < 0)
+	if (x + i + 1 > g_tab.x || y - i - 1 < 0)
 		ft_optimize(y - i, x + i, y, x);
 	i++;
 	return (ft_sav(i, x, y));
@@ -77,12 +77,12 @@ t_tab	ft_solve(void)
 	int		x;
 	int		y;
 
-	y = t.y;
+	y = g_tab.y;
 	while (y >= 0)
 	{
 		x = 0;
-		while (x <= t.x)
-			if (t.tab[y][x] == c.vid)
+		while (x <= g_tab.x)
+			if (g_tab.tab[y][x] == g_c.vid)
 			{
 				ft_grow(x++, y);
 			}
@@ -90,12 +90,12 @@ t_tab	ft_solve(void)
 				x++;
 		y--;
 	}
-	y = s.longeur - 1;
+	y = g_s.longeur - 1;
 	while (y >= 0)
 	{
 		x = 0;
-		while (x < s.longeur)
-			t.tab[s.y - y][s.x + x++] = c.ple;
+		while (x < g_s.longeur)
+			g_tab.tab[g_s.y - y][g_s.x + x++] = g_c.ple;
 		y--;
 	}
 	return (t);
