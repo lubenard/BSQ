@@ -6,7 +6,7 @@
 /*   By: atyczyns <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 15:08:49 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/21 15:46:22 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int		verif(char a, char b, char c, char try)
 
 void	ft_error(char c)
 {
-	write(1, &c, 2);
 	write(2, "map error\n", 10);
 }
 
@@ -66,12 +65,17 @@ char	**split_backslash_n2(char *str, int i, char a, char b, char c)
 	tab[k--] = 0;
 	while (str[i])
 	{
-		if (verif(a, b, c, str[i]) == 1)
-			ft_error(str[i]);
 		j = 0;
 		tab[k] = (char*)malloc(sizeof(*tab) * (count_char(i, str) + 1));
 		while (str[i] != '\n')
+		{
+			if (verif(a, b, c, str[i]) == 1)
+			{
+				ft_error(str[i]);
+				return (NULL);
+			}
 			tab[k][j++] = str[i++];
+		}
 		tab[k--][j] = '\0';
 		++i;
 	}
@@ -87,7 +91,7 @@ char	**split_backslash_n(char *str)
 	char	c;
 
 	i = 0;
-	while (str[i] > '9' || str[i] < '0')
+	while (str[i] <= '9' && str[i] >= '0')
 		++i;
 	a = str[i];
 	b = str[i + 1];
@@ -98,11 +102,14 @@ char	**split_backslash_n(char *str)
 
 void	ft_displa(char **tab, int x, int y)
 {
-	while (y >= 0)
+	int		i;
+
+	i = 0;
+	while (i < y)
 	{
-		write(1, tab[y], x + 1);
+		write(1, tab[i + 1], x + 1);
 		ft_putchar('\n');
-		y--;
+		++i;;
 	}
 }
 
@@ -114,9 +121,11 @@ void	ft_putchar(char c)
 int		main()
 {
 	char	**tab;
-	char	str[] = "11abc\naaa\nbbb\nccc\n";
+	char	str[] = "11abc\nada\nbbb\nccc\n";
 
 	tab = split_backslash_n(str);
+	if (tab == NULL)
+		return (0);
 	ft_displa(tab, 2, 3);
 	return (0);
 }
