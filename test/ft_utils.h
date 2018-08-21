@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 22:44:09 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 23:58:20 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char			char_empty(char *str);
 char			char_obs(char *str);
 int				tab_width(char **tab);
 int				tab_height(char **tab);
-char			*error(void);
+void			error(void);
 char			*ft_strcat(char *dest, char *src);
 int				ft_strlen(char *str);
 

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 23:41:06 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 23:59:54 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ char	*ft_realloc(char *str, int size)
 void	init(char *str)
 {
 	int i;
+
 	i = -1;
-	while (str[++i])
-		str[i] = 0;
+	while (++i < ft_strlen(str))
+		str[i] = '\0';
 }
 
 #include <stdio.h>
@@ -53,25 +54,17 @@ char	*the_map(char *argv)
 		return (NULL);
 	init(rep);
 	if ((fd = open(argv, O_RDONLY)) == (-1))
-	{
 		error();
-		return (NULL);
-	}
 	while ((fail = read(fd, buf, BUF_SIZE)))
 	{
 		if (fail == (-1))
-		{
 			error();
-			return (NULL);
-		}
 		buf[fail] = '\0';
 		rep = ft_strcat(rep, buf);
 		rep = ft_realloc(rep, fail + BUF_SIZE);
+		printf("%s", rep);
 	}
 	if (close(fd) == -1)
-	{
 		error();
-		return (NULL);
-	}
 	return (rep);
 }
