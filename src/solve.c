@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 13:30:55 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 14:03:47 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ int		ft_grow(int x, int y)
 			{
 				ft_sav(i, x, y);
 				ft_optimize(y - i, x_var, y_var, x + i);
+				ft_display(t);
+				ft_putchar('\n');
 				return (0);
 			}
 			x_var++;
