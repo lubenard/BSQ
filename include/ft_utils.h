@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 00:03:35 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 10:08:06 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ typedef struct		s_sol
 
 int		ft_display(t_tab t);
 void	ft_putchar(char c);
-t_tab	ft_solve(t_tab t, t_char c);
+t_tab	ft_solve(void);
 
 #endif

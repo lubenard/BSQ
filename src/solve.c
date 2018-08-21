@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 03:08:33 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 10:08:11 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_sav(int i, int x, int y)
 	return (0);
 }
 
-int		ft_grow(t_tab t, t_char c, int x, int y)
+int		ft_grow( int x, int y)
 {
 	int		x_var;
 	int		y_var;
@@ -48,7 +48,7 @@ int		ft_grow(t_tab t, t_char c, int x, int y)
 	return (0);
 }
 
-t_tab	ft_solve(t_tab t, t_char c)
+t_tab	ft_solve(void)
 {
 	int		x;
 	int		y;
@@ -59,7 +59,7 @@ t_tab	ft_solve(t_tab t, t_char c)
 		x = 0;
 		while (x <= t.x)
 			if (t.tab[y][x] == c.vid)
-				ft_grow(t, c, x++, y);
+				ft_grow( x++, y);
 			else
 				x++;
 		y--;

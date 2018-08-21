@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 03:09:38 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 10:08:07 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ int main(void)
 	t.x = 9;
 	t.y = 9;
 
-	ft_display(ft_solve(t, c));
+	ft_display(ft_solve());
 	return (0);
 }
