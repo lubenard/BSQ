@@ -6,7 +6,7 @@
 /*   By: atyczyns <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 13:58:37 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/21 16:33:48 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*the_map(char *argv)
 		error();
 	if (!(rep = malloc(sizeof(char *) * (BUF_SIZE + 1))))
 		return (NULL);
-	while ((fail  = read(fd, buf, BUF_SIZE)))
+	while ((fail = read(fd, buf, BUF_SIZE)))
 	{
 		if (fail == -1)
 			error();
@@ -53,7 +53,7 @@ char	*the_map(char *argv)
 		rep = ft_strcat(rep, buf);
 		rep = ft_realloc(rep, fail + BUF_SIZE);
 	}
-	if (close(fd)  == -1)
+	if (close(fd) == -1)
 		error();
 	return (rep);
 }

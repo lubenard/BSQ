@@ -6,7 +6,7 @@
 /*   By: atyczyns <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 10:00:04 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 13:11:23 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/21 16:33:15 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-void	ft_putchar(char c);
-void	error(void);
-char	*ft_realloc(char *str, int size);
-char	*ft_strcat(char *dest, char *src);
-int		ft_strlen(char *str);
+void			ft_putchar(char c);
+void			error(void);
+char			*ft_realloc(char *str, int size);
+char			*ft_strcat(char *dest, char *src);
+int				ft_strlen(char *str);
 typedef struct	s_reader
 {
 	int x;
