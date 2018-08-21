@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 10:04:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 21:43:47 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 23:35:23 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,14 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		dest[i] = src[j];
 		++j;
+		++i;
 	}
 	dest[j] = '\0';
 	return (dest);
 }
 
-void	error(void)
+char	*error(void)
 {
 	write(2, "map error\n", 10);
+	return ("00");
 }

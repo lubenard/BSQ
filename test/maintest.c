@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:05:02 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 21:46:16 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 22:58:00 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int		main(int argc, char **argv)
 	char	*rep;
 
 	(void)argc;
-	rep = the_map(*argv);
+	if ((rep = the_map(argv[1])) == NULL)
+		return (0);
 	g_tab.tab = split_backslash_n(rep);
 	g_c.ple = char_over(rep);
 	g_c.vid = char_empty(rep);

@@ -6,13 +6,13 @@
 /*   By: atyczyns <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 10:00:04 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 18:09:16 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 22:28:56 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_H
 # define FT_H
-# define BUF_SIZE 5000
+# define BUF_SIZE 4096
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   creat_table.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atyczyns <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 18:34:30 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 22:13:27 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,15 @@ int		verif(char a, char b, char c, char trys)
 	return (0);
 }
 
-char	**split_backslash_n2(char *str, int i, char a, char b, char c)
+char	**split_backslash_n2(char *str, int i, char a, char b)
 {
 	char	**tab;
 	int		k;
 	int		j;
+	char	c;
 
-	k = count_word(str) + 1;
-	if (!(tab = (char**)malloc(sizeof(**tab) * (count_word(str) + 1))))
+	c = str[i + 2];
+	if (!(tab = (char**)malloc(sizeof(**tab) * (k = (count_word(str) + 1)))))
 		return (NULL);
 	tab[k--] = 0;
 	while (str[++i])
@@ -90,7 +91,6 @@ char	**split_backslash_n(char *str)
 		++i;
 	a = str[i];
 	b = str[i + 1];
-	c = str[i + 2];
-	tab = split_backslash_n2(str, i - 1, a, b, c);
+	tab = split_backslash_n2(str, i - 1, a, b);
 	return (tab);
 }
