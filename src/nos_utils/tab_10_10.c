@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 03:03:36 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 03:09:38 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@ int main(void)
 	char **tab;
 	if ((tab = malloc(sizeof(char) * 9 * 9)) == NULL)
 		return (0);
-	char liste1[] = "..........";
+	char liste1[] = "o.........";
 	char liste2[] = "..........";
-	char liste3[] = "..........";
+	char liste3[] = "......o...";
 	char liste4[] = "..........";
 	char liste5[] = "....o.....";
 	char liste6[] = "..........";
-	char liste7[] = "..........";
+	char liste7[] = "o.........";
 	char liste8[] = "..........";
-	char liste9[] = "..........";
+	char liste9[] = "......o...";
 	char liste10[] = "..........";
 	tab[9] = liste1;
 	tab[8] = liste2;
