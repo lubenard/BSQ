@@ -6,16 +6,16 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 13:44:46 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 23:50:31 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 00:44:16 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_struct.h"
 
-void	ft_putchar(char c)
+/*void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
+}*/
 
 int		ft_display(t_tab t)
 {

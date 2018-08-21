@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 22:13:27 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 01:26:30 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ char	**split_backslash_n2(char *str, int i, char a, char b)
 	int		j;
 	char	c;
 
-	c = str[i + 2];
-	if (!(tab = (char**)malloc(sizeof(**tab) * (k = (count_word(str) + 1)))))
+	c = str[i + 3];
+	if (!(tab = (char**)malloc(sizeof(**tab) * (k = (count_word(str))))))
 		return (NULL);
-	tab[k--] = 0;
+	--k;
 	while (str[++i])
 	{
 		j = 0;
@@ -67,10 +67,7 @@ char	**split_backslash_n2(char *str, int i, char a, char b)
 		while (str[i] != '\n')
 		{
 			if (verif(a, b, c, str[i]) == 1)
-			{
 				error();
-				return (NULL);
-			}
 			tab[k][j++] = str[i++];
 		}
 		tab[k--][j] = '\0';

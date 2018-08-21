@@ -9,11 +9,11 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/Users/hjamet/Documents/BSQ/test/a.out",
-            "args": ["grille_100_20"],
+            "args": ["toto"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "lldb"
         }
     ]
