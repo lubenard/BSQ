@@ -6,13 +6,24 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 01:55:29 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 03:03:35 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_struct.h"
 
-int   ft_grow(t_tab t, t_char c, int x, int y)
+int    ft_sav(int i, int x, int y)
+{
+    if (s.longeur < i)
+    {
+        s.x = x;
+        s.y = y;
+        s.longeur = i;
+    }
+    return (0);
+}
+
+int     ft_grow(t_tab t, t_char c, int x, int y)
 {
     int     x_var;
     int     y_var;
@@ -27,28 +38,13 @@ int   ft_grow(t_tab t, t_char c, int x, int y)
         while (x_var <= (x + i))
         {
             if (t.tab[y - i][x_var] != c.vid || t.tab[y_var][x + i] != c.vid)
-            {
-                if (s.longeur < i)
-                {
-                    s.x = x;
-                    s.y = y;
-                    s.longeur = i;
-                    return (0);
-                }
-                return (0);
-            }
+                return((ft_sav(i, x, y) == 0) ? 0 : 0);
             x_var++;
             y_var--;
         }
     }
     i++;
-    if (s.longeur < i)
-    {
-        s.x = x;
-        s.y = y;
-        s.longeur = i;
-        return (0);
-    }
+    ft_sav(i, x, y);
     return (0);
 }
 
