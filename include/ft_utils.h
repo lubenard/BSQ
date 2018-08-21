@@ -6,17 +6,17 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 16:27:34 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:22:45 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_UTILS_H
 # define FT_UTILS_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-typedef	struct		s_char
+typedef struct		s_char
 {
 	char	vid;
 	char	obs;
@@ -24,7 +24,7 @@ typedef	struct		s_char
 	char	tem;
 }					t_char;
 
-typedef	struct		s_tab
+typedef struct		s_tab
 {
 	char	**tab;
 	int		x;
@@ -33,13 +33,13 @@ typedef	struct		s_tab
 
 typedef struct		s_sol
 {
-	int 	x;
-	int 	y;
+	int		x;
+	int		y;
 	int		longeur;
 }					t_sol;
 
-int		ft_display(t_tab t);
-void	ft_putchar(char c);
-t_tab	ft_solve(void);
+int					ft_display(t_tab t);
+void				ft_putchar(char c);
+t_tab				ft_solve(void);
 
 #endif

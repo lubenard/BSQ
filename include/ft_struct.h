@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 13:52:31 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 00:03:33 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:42:38 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include "ft_utils.h"
 
-t_char		c;
-t_tab		t;
-t_sol       s;
+t_char	g_c;
+t_tab	g_t;
+t_sol	g_s;
 
 #endif
