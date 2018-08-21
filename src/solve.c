@@ -6,11 +6,12 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 14:03:47 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 15:09:54 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_struct.h"
+#include <stdio.h>
 
 void		ft_optimize(int y1, int x1, int y2, int x2)
 {
@@ -60,7 +61,7 @@ int		ft_grow(int x, int y)
 			if (t.tab[y - i][x_var] != c.vid || t.tab[y_var][x + i] != c.vid)
 			{
 				ft_sav(i, x, y);
-				ft_optimize(y - i, x_var, y_var, x + i);
+				//ft_optimize(y - i, x_var, y_var, x + i);
 				ft_display(t);
 				ft_putchar('\n');
 				return (0);
@@ -80,6 +81,7 @@ t_tab	ft_solve(void)
 {
 	int		x;
 	int		y;
+	int		n = 0;		//a supprimer
 
 	y = t.y;
 	while (y >= 0)
@@ -87,7 +89,10 @@ t_tab	ft_solve(void)
 		x = 0;
 		while (x <= t.x)
 			if (t.tab[y][x] == c.vid)
+			{
 				ft_grow(x++, y);
+				n++;
+			}
 			else
 				x++;
 		y--;
@@ -100,5 +105,6 @@ t_tab	ft_solve(void)
 			t.tab[s.y - y][s.x + x++] = c.ple;
 		y--;
 	}
+	printf("%d", n); 			//a supprimer
 	return (t);
 }
