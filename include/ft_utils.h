@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 10:08:06 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 13:42:19 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ typedef	struct		s_char
 	char	vid;
 	char	obs;
 	char	ple;
-	char	lig;
-	char	coi;
 }					t_char;
 
 typedef	struct		s_tab

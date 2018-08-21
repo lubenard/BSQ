@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 13:44:46 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 10:43:13 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 13:23:44 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_display(t_tab t)
 {
 	while (t.y >= 0)
 	{
-		write(1, t.tab[t.y], t.x);
+		write(1, t.tab[t.y], t.x + 1);
 		ft_putchar('\n');
 		t.y--;
 	}
