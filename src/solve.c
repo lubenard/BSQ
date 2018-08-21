@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 16:55:10 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 17:47:05 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ int		ft_grow(int x, int y)
 			if (t.tab[y - i][x_var] == c.obs || t.tab[y_var][x + i] == c.obs)
 			{
 				ft_sav(i, x, y);
-//				if (t.tab[y - i][x_var] == c.obs)
-//					ft_optimize(y - i, x_var, y, x);
-//				else
-//					ft_optimize(y_var, x + i, y, x);
+				if (t.tab[y - i][x_var] == c.obs)
+					ft_optimize(y - i, x_var, y, x);
+				else
+					ft_optimize(y_var, x + i, y, x);
 				ft_display(t);
 				ft_putchar('\n');
 				return (0);
@@ -72,10 +72,12 @@ int		ft_grow(int x, int y)
 			y_var++;
 		}
 	}
+	if (x + i + 1 > t.x || y - i - 1 < 0)
+		ft_optimize(y - i, x + i, y, x);
 	i++;
 	ft_sav(i, x, y);
-//	ft_display(t);
-//	ft_putchar('\n');
+	ft_display(t);
+	ft_putchar('\n');
 	return (0);
 }
 
