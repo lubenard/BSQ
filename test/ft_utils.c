@@ -1,45 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.h                                         :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 16:27:34 by hjamet           ###   ########.fr       */
+/*   Created: 2018/08/20 13:44:46 by hjamet            #+#    #+#             */
+/*   Updated: 2018/08/21 18:40:35 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_UTILS_H
-# define FT_UTILS_H
+#include "ft_utils.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-
-typedef	struct		s_char
+/*void	ft_putchar(char c)
 {
-	char	vid;
-	char	obs;
-	char	ple;
-	char	tem;
-}					t_char;
+	write(1, &c, 1);
+}*/
 
-typedef	struct		s_tab
+int		ft_display(t_tab t)
 {
-	char	**tab;
-	int		x;
-	int		y;
-}					t_tab;
-
-typedef struct		s_sol
-{
-	int 	x;
-	int 	y;
-	int		longeur;
-}					t_sol;
-
-int		ft_display(t_tab t);
-void	ft_putchar(char c);
-t_tab	ft_solve(void);
-
-#endif
+	while (t.y >= 0)
+	{
+		write(1, t.tab[t.y], t.x + 1);
+		ft_putchar('\n');
+		t.y--;
+	}
+	ft_putchar('\n');
+	return (0);
+}

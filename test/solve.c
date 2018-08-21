@@ -6,12 +6,11 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 18:34:49 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 18:42:45 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_struct.h"
-#include <stdio.h>
+#include "ft_struct.h"
 
 void		ft_optimize(int y1, int x1, int y2, int x2)
 {

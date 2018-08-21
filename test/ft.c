@@ -1,45 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.h                                         :+:      :+:    :+:   */
+/*   ft.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 16:27:34 by hjamet           ###   ########.fr       */
+/*   Created: 2018/08/21 10:04:57 by atyczyns          #+#    #+#             */
+/*   Updated: 2018/08/21 18:36:38 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_UTILS_H
-# define FT_UTILS_H
+#include "ft_utils.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-
-typedef	struct		s_char
+void	ft_putchar(char c)
 {
-	char	vid;
-	char	obs;
-	char	ple;
-	char	tem;
-}					t_char;
+	write(1, &c, 1);
+}
 
-typedef	struct		s_tab
+int		ft_strlen(char *str)
 {
-	char	**tab;
-	int		x;
-	int		y;
-}					t_tab;
+	int		i;
 
-typedef struct		s_sol
+	i = 0;
+	while (str[i])
+		++i;
+	return (i);
+}
+
+char	*ft_strcat(char *dest, char *src)
 {
-	int 	x;
-	int 	y;
-	int		longeur;
-}					t_sol;
+	int		i;
+	int		j;
 
-int		ft_display(t_tab t);
-void	ft_putchar(char c);
-t_tab	ft_solve(void);
+	j = 0;
+	i = 0;
+	while (dest[i])
+		++i;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		++j;
+	}
+	dest[j] = '\0';
+	return (dest);
+}
 
-#endif
+void	error(void)
+{
+	write(2, "map error\n", 10);
+}

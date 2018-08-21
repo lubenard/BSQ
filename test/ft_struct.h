@@ -1,45 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.h                                         :+:      :+:    :+:   */
+/*   ft_struct.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 16:27:34 by hjamet           ###   ########.fr       */
+/*   Created: 2018/08/20 13:52:31 by hjamet            #+#    #+#             */
+/*   Updated: 2018/08/21 00:03:33 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_UTILS_H
-# define FT_UTILS_H
+#ifndef FT_STRUCT_H
+# define FT_STRUCT_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include "ft_utils.h"
 
-typedef	struct		s_char
-{
-	char	vid;
-	char	obs;
-	char	ple;
-	char	tem;
-}					t_char;
-
-typedef	struct		s_tab
-{
-	char	**tab;
-	int		x;
-	int		y;
-}					t_tab;
-
-typedef struct		s_sol
-{
-	int 	x;
-	int 	y;
-	int		longeur;
-}					t_sol;
-
-int		ft_display(t_tab t);
-void	ft_putchar(char c);
-t_tab	ft_solve(void);
+t_char		c;
+t_tab		t;
+t_sol       s;
 
 #endif
