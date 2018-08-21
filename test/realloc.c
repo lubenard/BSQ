@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 20:54:29 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 21:00:25 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*the_map(char *argv)
 		error();
 	if (!(rep = malloc(sizeof(char) * (BUF_SIZE + 1))))
 		return (NULL);
-	while ((fail = read(fd, buf, BUF_SIZE)))
+	while ((fail = read(3, buf, BUF_SIZE)))
 	{
 		if (fail == -1)
 			error();
