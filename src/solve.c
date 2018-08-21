@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 21:13:45 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 16:35:05 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 16:55:10 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,13 @@ int		ft_grow(int x, int y)
 		y_var = y - i;
 		while (x_var >= x)
 		{
-			if (t.tab[y - i][x_var] != c.vid || t.tab[y_var][x + i] != c.vid)
+			if (t.tab[y - i][x_var] == c.obs || t.tab[y_var][x + i] == c.obs)
 			{
 				ft_sav(i, x, y);
-				if (t.tab[y - i][x_var] != c.vid)
-					ft_optimize(y - i, x_var, y, x);
-				else
-					ft_optimize(y_var, x + i, y, x);
+//				if (t.tab[y - i][x_var] == c.obs)
+//					ft_optimize(y - i, x_var, y, x);
+//				else
+//					ft_optimize(y_var, x + i, y, x);
 				ft_display(t);
 				ft_putchar('\n');
 				return (0);
