@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 14:00:40 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 16:29:59 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 	char liste2[] = "....o.o...";
 	char liste3[] = "....o.....";
 	char liste4[] = "..........";
-	char liste5[] = "..........";
+	char liste5[] = ".......o..";
 	char liste6[] = "..........";
 	char liste7[] = "o.........";
 	char liste8[] = "..........";
@@ -41,6 +41,7 @@ int main(void)
 	c.ple = 'F';
 	c.vid = '.';
 	c.obs = 'o';
+	c.tem = 'T';
 	t.tab = tab;
 	t.x = 9;
 	t.y = 9;
