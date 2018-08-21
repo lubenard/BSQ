@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 11:33:15 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/21 18:34:49 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/21 23:49:46 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int main(void)
 	if ((tab = malloc(sizeof(char) * 9 * 9)) == NULL)
 		return (0);
 	char liste1[] = "..........";
-	char liste2[] = "...o......";
+	char liste2[] = "...o...o..";
 	char liste3[] = ".......o..";
 	char liste4[] = "..o.......";
-	char liste5[] = ".....o....";
+	char liste5[] = "..........";
 	char liste6[] = "o......o..";
 	char liste7[] = "..........";
 	char liste8[] = "..o....o..";
@@ -38,13 +38,13 @@ int main(void)
 	tab[1] = liste9;
 	tab[0] = liste10;
 
-	c.ple = 'F';
-	c.vid = '.';
-	c.obs = 'o';
-	c.tem = 'T';
-	t.tab = tab;
-	t.x = 9;
-	t.y = 9;
+	g_c.ple = 'F';
+	g_c.vid = '.';
+	g_c.obs = 'o';
+	g_c.tem = 'T';
+	g_tab.tab = tab;
+	g_tab.x = 9;
+	g_tab.y = 9;
 
 	ft_display(ft_solve());
 	return (0);
