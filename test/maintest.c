@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:05:02 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 12:47:05 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 14:31:50 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int		main(int argc, char **argv)
 	g_c.obs = char_empty(rep);
 	g_c.tem = g_c.ple + g_c.vid + g_c.obs;
 	g_tab.x = tab_width(g_tab.tab);
-	g_tab.y = tab_height(g_tab.tab);
 
 	ft_display(ft_solve());
 	return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_caract.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atyczyns <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 16:46:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 17:00:36 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 14:15:25 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ char	char_empty(char *str)
 	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 		++i;
-	empty = str[i + 1];
+	++i;
+	empty = str[i];
 	return (empty);
 }
 
@@ -63,5 +64,5 @@ int		tab_height(char **tab)
 	i = 0;
 	while (tab[i])
 		++i;
-	return (i - 1);
+	return (i - 3);
 }

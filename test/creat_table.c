@@ -6,11 +6,11 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 13:53:57 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 16:05:33 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_utils.h"
+#include "ft_struct.h"
 
 int		count_word(char *str)
 {
@@ -56,25 +56,25 @@ char	**split_backslash_n2(char *str, int i, char a, char b)
 	char	c;
 
 	c = str[i + 2];
-	if (!(tab = (char**)malloc(sizeof(**tab) * ((k = (count_word(str)) + 1)))))
+	if (!(tab = (char**)malloc(sizeof(char*) * ((k = (count_word(str))) * 6))))
 		return (NULL);
-	tab[k--] = 0;
-	tab[k--] = 0;
-	tab[k--] = 0;	
-	while (str[i] != '\n')
+	k = k - 2;
+	while (str[i] != '\n' && str[i])
 		++i;
 	while (k >= 0)
 	{
 		j = 0;
-		if (!(tab[k] = (char*)malloc(sizeof(*tab) * (count_char(i, str) + 1))))
-			return (NULL);
+		if (k >= 0)
+			if (!(tab[k] = (char*)malloc(sizeof(*tab) * (count_char(i, str) + 1))))
+				return (NULL);
 		while (str[++i] != '\n')
 		{
 			if (verif(a, b, c, str[i]) == 1)
 				error();
-			tab[k][j++] = str[i++];
+			tab[k][j++] = str[i];
 		}
 		tab[k--][j] = '\0';
+		g_tab.y = j - 1;
 	}
 	return (tab);
 }
