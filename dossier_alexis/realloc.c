@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 22:13:46 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 23:05:38 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	init(char *str)
 		str[i] = '\0';
 }
 
-#include <stdio.h>
 char	*the_map(char argv[1], int a)
 {
 	int		fd;

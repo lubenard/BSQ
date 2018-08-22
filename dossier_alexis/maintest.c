@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:05:02 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 22:30:26 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 23:05:41 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ int		main(int argc, char **argv)
 		g_c.obs = char_empty(rep);
 		g_c.tem = g_c.ple + g_c.vid + g_c.obs;
 		g_tab.x = tab_width(g_tab.tab);
-
+		if (g_tab.x < 0)
+			g_tab.x = 0;
 		ft_display(ft_solve());
 		return (0);
 	}

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 22:30:28 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 23:05:33 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ typedef struct	s_sol
 int				ft_display(t_tab t);
 void			ft_putchar(char c);
 t_tab			ft_solve(void);
-
+char			*word_copy(char *src);
+int				words_num(char *str);
 char			*ft_realloc(char *str, int size);
 char			*the_map(char argv[1], int a);
 char			**split_backslash_n(char *str);
