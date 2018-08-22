@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 23:05:36 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 23:19:10 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ char	**ft_split_backslash(char *str, char a, char b, char c)
 	char	**tab;
 
 	i = 0;
+	x = words_num(str) - 1;
 	while (str[i] != '\n' && str[i])
 		i++;
-	if ((tab = malloc(sizeof(char*) * (x = words_num(str) - 1)  + 9)) == NULL)
+	if ((tab = malloc(sizeof(char*) * (x + 9))) == NULL)
 		return (NULL);
 	while (str[i])
 	{
@@ -45,8 +46,7 @@ char	**ft_split_backslash(char *str, char a, char b, char c)
 		else
 			i++;
 	}
-	tab[words_num(str) + 1] = 0;
-	return (tab);
+	return ((tab[words_num(str) + 1] = 0) == 0 ? tab : tab);
 }
 
 void	verif_tab(char **tab)
@@ -95,4 +95,10 @@ char	**split_backslash_n(char *str)
 		error();
 	tab = ft_split_backslash(str, str[i], str[i + 1], str[i + 2]);
 	return (tab);
+}
+
+void	error(void)
+{
+	write(2, "map error\n", 10);
+	exit(0);
 }
