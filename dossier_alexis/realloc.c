@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 21:28:48 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 21:50:30 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	*ft_realloc(char *str, int size)
 		rep[i] = str[i];
 		++i;
 	}
-//	free(str);
 	str = NULL;
 	return (rep);
 }
