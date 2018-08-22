@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:05:02 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 21:49:21 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 22:17:51 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 int		main(int argc, char **argv)
 {
 	char	*rep;
+	int		b;
 
-	if (argc == 1);
-
-	while (argc > 1)
+	b = 1;
+	if (argc == 1)
+		b = 0;
+	while (argc >= 1)
 	{
-		if ((rep = the_map(argv[argc--])) == NULL)
+		if ((rep = the_map(argv[--argc], b)) == NULL)
 			return (0);
 		g_tab.tab = split_backslash_n(rep);
 		verif_tab(g_tab.tab);

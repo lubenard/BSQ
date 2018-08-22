@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 21:23:41 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 22:14:24 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
 
 # define BUF_SIZE 4096
 
@@ -47,7 +46,7 @@ void			ft_putchar(char c);
 t_tab			ft_solve(void);
 
 char			*ft_realloc(char *str, int size);
-char			*the_map(char argv[1]);
+char			*the_map(char argv[1], int a);
 char			**split_backslash_n(char *str);
 char			**split_backslash_n2(char *str, int i, char a, char b);
 int				verif(char a, char b, char c, char trys);

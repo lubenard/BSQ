@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 21:50:30 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 22:13:46 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,21 @@ void	init(char *str)
 }
 
 #include <stdio.h>
-char	*the_map(char argv[1])
+char	*the_map(char argv[1], int a)
 {
 	int		fd;
 	int		fail;
 	char	buf[BUF_SIZE + 1];
 	char	*rep;
 
-	if ((fd = open(argv, O_RDONLY)) == (-1))
-		error();
+	fd = 0;
+	if (a != 0)
+		if ((fd = open(argv, O_RDONLY)) == (-1))
+			error();
 	if (!(rep = malloc(sizeof(char) * (BUF_SIZE + 1))))
 		return (NULL);
 	init(rep);
-	while ((fail = read(0, buf, BUF_SIZE)))
+	while ((fail = read(fd, buf, BUF_SIZE)))
 	{
 		if (fail == (-1))
 			error();
@@ -65,6 +67,5 @@ char	*the_map(char argv[1])
 	}
 	if (close(fd) == -1)
 		error();
-	printf("%s\n", rep);
 	return (rep);
 }
