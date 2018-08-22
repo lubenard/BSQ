@@ -6,21 +6,25 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 13:44:46 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 00:05:09 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 11:58:31 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_struct.h"
+#include "../include/ft_struct.h"
 
-/*void	ft_putchar(char c)
+int		ft_display(void)
 {
-	write(1, &c, 1);
-}*/
+	int x_var;
 
-int		ft_display(t_tab t)
-{
 	while (g_tab.y >= 0)
 	{
+		x_var = g_tab.x;
+		while (x_var >= 0)
+		{
+			if (g_tab.tab[g_tab.y][x_var] == g_c.tem)
+				g_tab.tab[g_tab.y][x_var] = g_c.vid;
+			x_var--;
+		}
 		write(1, g_tab.tab[g_tab.y], g_tab.x + 1);
 		ft_putchar('\n');
 		g_tab.y--;

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 10:44:30 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 13:53:57 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,20 @@ char	**split_backslash_n2(char *str, int i, char a, char b)
 	int		j;
 	char	c;
 
-	c = str[i + 3];
-	if (!(tab = (char**)malloc(sizeof(**tab) * (k = (count_word(str) + 1)))))
+	c = str[i + 2];
+	if (!(tab = (char**)malloc(sizeof(**tab) * ((k = (count_word(str)) + 1)))))
 		return (NULL);
 	tab[k--] = 0;
-	while (str[++i])
+	tab[k--] = 0;
+	tab[k--] = 0;	
+	while (str[i] != '\n')
+		++i;
+	while (k >= 0)
 	{
 		j = 0;
 		if (!(tab[k] = (char*)malloc(sizeof(*tab) * (count_char(i, str) + 1))))
 			return (NULL);
-		while (str[i] != '\n')
+		while (str[++i] != '\n')
 		{
 			if (verif(a, b, c, str[i]) == 1)
 				error();
@@ -88,6 +92,6 @@ char	**split_backslash_n(char *str)
 		++i;
 	a = str[i];
 	b = str[i + 1];
-	tab = split_backslash_n2(str, i - 1, a, b);
+	tab = split_backslash_n2(str, i, a, b);
 	return (tab);
 }

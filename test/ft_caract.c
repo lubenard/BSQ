@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 16:46:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/21 21:44:26 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 12:54:16 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	char_over(char *str)
 	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 		++i;
-	over = str[i];
+	over = str[i+ 2];
 	return (over);
 }
 
@@ -52,7 +52,7 @@ int		tab_width(char **tab)
 {
 	int		i;
 
-	i = ft_strlen(tab[0]);
+	i = ft_strlen(tab[1]);
 	return (i - 1);
 }
 
@@ -60,7 +60,7 @@ int		tab_height(char **tab)
 {
 	int		i;
 
-	i = 0;
+	i = 1;
 	while (tab[i])
 		++i;
 	return (i - 1);

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:05:02 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 10:59:43 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 12:47:05 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int		main(int argc, char **argv)
 		return (0);
 	g_tab.tab = split_backslash_n(rep);
 	g_c.ple = char_over(rep);
-	g_c.vid = char_empty(rep);
-	g_c.obs = char_obs(rep);
+	g_c.vid = char_obs(rep);
+	g_c.obs = char_empty(rep);
 	g_c.tem = g_c.ple + g_c.vid + g_c.obs;
 	g_tab.x = tab_width(g_tab.tab);
 	g_tab.y = tab_height(g_tab.tab);

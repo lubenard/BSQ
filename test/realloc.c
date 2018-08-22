@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 17:12:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 11:34:37 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 12:05:30 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,11 @@ char	*the_map(char argv[1])
 		if (fail == (-1))
 			error();
 		buf[fail] = '\0';
-		printf("%s\n", buf);
 		rep = ft_strcat(rep, buf);
-		printf("%s\n", rep);
 		rep = ft_realloc(rep, fail + BUF_SIZE);
-		printf("%s\n", rep);
 	}
 	if (close(fd) == -1)
 		error();
+	printf("%s\n", rep);
 	return (rep);
 }
