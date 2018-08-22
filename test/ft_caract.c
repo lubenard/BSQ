@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 16:46:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 14:17:19 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 17:39:00 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,5 @@ int		tab_width(char **tab)
 	int		i;
 
 	i = ft_strlen(tab[1]);
-	return (i - 1);
-}
-
-int		tab_height(char **tab)
-{
-	int		i;
-
-	i = 0;
-	while (tab[i])
-		++i;
 	return (i - 1);
 }

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 14:15:30 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 17:21:38 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ char			*the_map(char argv[1]);
 char			**split_backslash_n(char *str);
 char			**split_backslash_n2(char *str, int i, char a, char b);
 int				verif(char a, char b, char c, char trys);
-int				count_word(char *str);
-int				count_word(char *str);
 char			char_over(char *str);
 char			char_empty(char *str);
 char			char_obs(char *str);
