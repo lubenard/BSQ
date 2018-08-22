@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 16:46:57 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 17:39:00 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 18:17:22 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ char	char_obs(char *str)
 	int		i;
 
 	i = 0;
-	while (str[i] >= 0 && str[i] <= 9)
+	while (str[i] >= '0' && str[i] <= '9')
 		++i;
-	obs = str[i + 2];
+	obs = str[i];
 	return (obs);
 }
 

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 17:51:13 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/08/22 18:39:48 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*word_copy(char *src)
 	char	*output;
 
 	index = 0;
-	while (src[index] > 32)
+	while (src[index] != '\n')
 		index++;
 	output = malloc(sizeof(char) * (index + 1));
 	if (output == NULL)
 		return (NULL);
 	index = 0;
-	while (src[index] > 32)
+	while (src[index] != '\n')
 	{
 		output[index] = src[index];
 		index++;
@@ -72,7 +72,7 @@ char	**ft_split_backslash(char *str, char a, char b, char c)
 	x = words_num(str) - 1;
 	while (str[i] != '\n' && str[i])
 		i++;
-	if ((tab = malloc(sizeof(char*) * words_num(str))) == NULL)
+	if ((tab = malloc(sizeof(char*) * x + 9)) == NULL)
 		return (NULL);
 	while (str[i])
 	{
