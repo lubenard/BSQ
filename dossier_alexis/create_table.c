@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 13:02:08 by atyczyns          #+#    #+#             */
-/*   Updated: 2018/08/22 21:23:46 by atyczyns         ###   ########.fr       */
+/*   Updated: 2018/08/22 22:38:06 by hjamet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void	verif_tab(char **tab)
 	while (tab[j])
 	{
 		k = 0;
-		while (tab[j][k])
+		while (tab[j][k] != '\0')
 			++k;
 		if (i != k)
 			error();
