@@ -17,6 +17,7 @@
 **Marche pour deux arguments mais pas pour 3 (segfault)
 **Affichage des map a l'envers
 **L'algo fonctionne pour la deuxieme map mais pas pour la premiere (ordre d'affichage inverse, ne pas oublier)
+**Les autres caracteres que des points sont comptes comme des points
 */
 
 int		main(int argc, char **argv)

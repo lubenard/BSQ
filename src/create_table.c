@@ -63,8 +63,12 @@ void	verif_tab(char **tab)
 	{
 		k = 0;
 		while (tab[j][k] != '\0')
+		{
+			if (tab[j][k] != '.' && tab[j][k] != 'o')
+				error();
 			++k;
-		if (i != k)
+		}
+		if (i != k )
 			error();
 		++j;
 	}
