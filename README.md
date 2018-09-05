@@ -1,6 +1,7 @@
 # BSQ
 We'll do it!!!!!!! :P
-![Alt Text] (https://giphy.com/gifs/just-do-it-b7f0X8Okk1uyk)
+
+![Alt Text](https://giphy.com/gifs/just-do-it-b7f0X8Okk1uyk)
 
 ### What remains:
 #### -Faire une fonction init qui reinitialise les struct + var a chaque i++
