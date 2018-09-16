@@ -6,7 +6,7 @@
 #    By: lubenard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/16 09:14:04 by lubenard          #+#    #+#              #
-#    Updated: 2018/08/22 19:44:06 by lubenard         ###   ########.fr        #
+#    Updated: 2018/09/15 19:31:33 by luca             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS =  src/ft.c\
 		src/solve.c\
 		src/create_table.c\
 		src/ft_caract.c\
-		src/realloc.c
+		src/realloc.c\
+		src/reinit.c
 
 OBJ = $(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:21:40 by hjamet            #+#    #+#             */
-/*   Updated: 2018/08/22 23:05:33 by hjamet           ###   ########.fr       */
+/*   Updated: 2018/09/15 19:30:17 by luca             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,5 @@ void			error(void);
 char			*ft_strcat(char *dest, char *src);
 int				ft_strlen(char *str);
 void			verif_tab(char **tab);
-
+void			reinit_struct();
 #endif
