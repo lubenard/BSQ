@@ -18,6 +18,8 @@ int		main(int argc, char **argv)
 	int		b;
 	int		i;
 
+	int k = 0;
+
 	b = 1;
 	i = 0;
 	if (argc == 1)
@@ -28,10 +30,10 @@ int		main(int argc, char **argv)
 		if ((rep = the_map(argv[++i], b)) == NULL)
 			return (0);
 		g_tab.tab = split_backslash_n(rep);
-		verif_tab(g_tab.tab);
 		g_c.ple = char_over(rep);
 		g_c.vid = char_obs(rep);
 		g_c.obs = char_empty(rep);
+		verif_tab(g_tab.tab);
 		g_c.tem = g_c.ple + g_c.vid + g_c.obs;
 		g_tab.x = tab_width(g_tab.tab);
 		if (g_tab.x < 0)

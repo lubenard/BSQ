@@ -8,3 +8,5 @@ We'll do it!!!!!!! :P
 #### - [Résolu le 16/09/18] Marche pour deux arguments mais pas pour 3 (segfault).
 #### - [Résolu le 16/09/18] Affichage des map a l'envers.
 #### - [Résolu le 16/09/18] L'algo fonctionne pour la deuxieme map mais pas pour la premiere (ordre d'affichage inverse, ne pas oublier).
+#### - [Résolu le 24/09/18] L'algo de verification de la grille ne prenait pas en compte si les characteres de la grille étaient différent de '.' et 'o'.
+#### - Pas de lecture depuis l'entrée standart.
