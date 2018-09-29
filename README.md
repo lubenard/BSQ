@@ -11,20 +11,24 @@ We'll do it!!!!!!! :P
 #### - [Résolu le 24/09/18] L'algo de verification de la grille faisait n'importe quoi si les characteres de la grille étaient différent de '.' et 'o'.
 #### - Pas de lecture depuis l'entrée standart.
 
-##Comment l'utiliser:
-#### Génerer une grille de 100x100 avec 20% de densité:
+## Comment l'utiliser:
+Génerer une grille de 100x100 avec 20% de densité:
 ```
 ./grille.sh 100 100 20 > grille
 ```
-#### Génerer une grille de 20x10 avec 5% de densité:
+Génerer une grille de 20x10 avec 5% de densité:
 ```
 ./grille.sh 20 10 5 > grille
 ```
-#### Le lancer (BSQ peut prendre plusieurs grilles en paramètre):
+Compiler bsq:
+```
+make
+```
+Le lancer (BSQ peut prendre plusieurs grilles en paramètre):
 ```
 ./bsq grille1 grille2 grille3 etc...
 ```
-#### OU: /!\NON FONCTIONNEL POUR LE MOMENT
+OU: /!\ NON FONCTIONNEL POUR LE MOMENT
 ```
 ./grille.sh 100 100 20 | ./bsq
 ```
