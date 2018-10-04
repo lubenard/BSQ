@@ -60,5 +60,6 @@ void			error(void);
 char			*ft_strcat(char *dest, char *src);
 int				ft_strlen(char *str);
 void			verif_tab(char **tab);
-void			reinit_struct();
+void			reinit_struct(void);
+void			fill_tab(char *rep);
 #endif

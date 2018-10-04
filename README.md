@@ -9,7 +9,7 @@ We'll do it!!!!!!! :P
 #### - [Résolu le 16/09/18] Affichage des map a l'envers.
 #### - [Résolu le 16/09/18] L'algo fonctionne pour la deuxieme map mais pas pour la premiere (ordre d'affichage inverse, ne pas oublier).
 #### - [Résolu le 24/09/18] L'algo de verification de la grille faisait n'importe quoi si les characteres de la grille étaient différent de '.' et 'o'.
-#### - Pas de lecture depuis l'entrée standart.
+#### - [Résolu le 4/10/18] Pas de lecture depuis l'entrée standard.
 
 ## Comment l'utiliser:
 Génerer une grille de 100x100 avec 20% de densité:
@@ -28,7 +28,15 @@ Le lancer (BSQ peut prendre plusieurs grilles en paramètre):
 ```
 ./bsq grille1 grille2 grille3 etc...
 ```
-OU: /!\ NON FONCTIONNEL POUR LE MOMENT
+OU:
 ```
 ./grille.sh 100 100 20 | ./bsq
+```
+pour le lire depuis l'entrée standard.
+
+Remarque: créer une grille puis l'afficher avec cat fonctionne aussi sur l'entrée standard
+Exemple:
+```
+./grille.sh 5 5 2 > t
+cat t | ./bsq
 ```
