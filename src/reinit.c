@@ -6,7 +6,7 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 18:28:09 by luca              #+#    #+#             */
-/*   Updated: 2018/09/15 19:25:49 by luca             ###   ########.fr       */
+/*   Updated: 2018/11/19 17:52:02 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ void	reinit_t_char(void)
 void	reinit_t_tab(void)
 {
 	g_tab.tab = 0;
-	g_tab.x   = 0;
-	g_tab.y   = 0;
+	g_tab.x = 0;
+	g_tab.y = 0;
 }
 
 void	reinit_t_sol(void)
 {
 	g_s.longeur = 0;
-	g_s.x       = 0;
-	g_s.y       = 0;
+	g_s.x = 0;
+	g_s.y = 0;
 }
 
 void	reinit_struct(void)

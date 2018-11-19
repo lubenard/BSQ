@@ -6,7 +6,7 @@
 /*   By: hjamet <hjamet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:05:02 by hjamet            #+#    #+#             */
-/*   Updated: 2018/09/16 18:37:00 by luca             ###   ########.fr       */
+/*   Updated: 2018/11/19 17:52:24 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		main(int argc, char **argv)
 	}
 	else
 	{
-		while (i != argc -1)
+		while (i != argc - 1)
 		{
 			reinit_struct();
 			if ((rep = the_map(argv[++i], 1)) == NULL)
